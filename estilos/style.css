@@ -112,6 +112,8 @@ body {
                 transition: 0.2s;
                 display: flex;
                 flex-direction: column;
+                text-align: start;
+                align-items: start;
                 gap: 2vh;
                 height: auto;
                 background-color: transparent;
@@ -131,11 +133,13 @@ body {
                     border-radius: 10px;
                     padding: 2vh;
                     display: flex;
-                    justify-content: center;
+                    justify-content: start;
                     align-items: center;
+                    color: white;
                 }
 
                 a:hover{
+                    color: white;
                    background-color:var(--cor-tags-a-hover-div);
                 }
                

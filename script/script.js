@@ -6,14 +6,14 @@ var entrouNaDiv = false;
 window.addEventListener("DOMContentLoaded", adicionaLinkLista);
 
 let links = [
-    { nome: 'Visão geral',subNomes:['oi','oi','oi'], class: 'rotaciona', id: 1},
-    { nome: 'Usos',subNomes:['ab','ab','ab'], class: 'rotaciona', id: 2 },
+    { nome: 'Visão geral',subNomes:['Unreal Engine','Destaques','Licenciamento','Perguntas Frequentes'], class: 'rotaciona', id: 1},
+    { nome: 'Usos',subNomes:['Mudança para a Unreal Engine ','Jogos AAA ','Jogos independentes','Jogos para celular','Unreal Editor para Fortnite','Filmes e TV ','Transmissões e eventos ao vivo '], class: 'rotaciona', id: 2 },
     { nome: 'Novidades' },
     { nome: 'Fóruns' },
     { nome: 'Documentação' },
-    { nome: 'Aprendizados', class: 'rotaciona', id: 3 },
-    { nome: 'Conectar', class: 'rotaciona', id: 4 },
-    { nome: 'Mais', class: 'rotaciona', id: 5 }
+    { nome: 'Aprendizados',subNomes:['Biblioteca de Aprendizado','Introduçao','Repositório de Trecho de código'], class: 'rotaciona', id: 3 },
+    { nome: 'Conectar',subNomes:['Eventos','MegaGrants','MeetUps','Parceiros de Serviço','Estudantes e Escolas','Treinamento Profissional','Parceiros Academicos e de Treinamento'], class: 'rotaciona', id: 4 },
+    { nome: 'Mais',subNomes:['MarketPlace'], class: 'rotaciona', id: 5 }
 ];
 
 function adicionaLinkLista() {
@@ -21,6 +21,15 @@ function adicionaLinkLista() {
     links.forEach(item => {
         
         if (item.class == 'rotaciona') {
+            let linksHtml = ''
+            if(item.subNomes){
+                
+                item.subNomes.forEach(subLink =>{
+                    linksHtml+=`
+                        <a href="" ">${subLink}</a>
+                    `
+                })
+            }
             listaLinks.innerHTML += `
             <div class='conteudoMenu'>
                 <div class='conteudo_rotaciona'>
@@ -28,7 +37,7 @@ function adicionaLinkLista() {
                     <img  class="seta ${item.class}" src="./assets/images/seta.png" alt="Seta" >
                 </div>
                 <div id="div-${item.id}" class="divSobrepoe" style="display: none;">
-                     
+                     ${linksHtml}
                 </div>
             </div>
             `;
@@ -42,18 +51,6 @@ function adicionaLinkLista() {
 
     let subListas=document.querySelectorAll('.divSobrepoe');
 
-
-    subListas.forEach(item =>{
-        links.forEach(link => {
-        
-        item.innerHTML+=`
-         <a href="" id="link-${item.id}" ">${link}</a>
-        
-        `
-
-    })
-
-})
 
 
 
