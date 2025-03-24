@@ -13,7 +13,7 @@ let links = [
     { nome: 'Documentação' },
     { nome: 'Aprendizados',subNomes:['Biblioteca de Aprendizado','Introduçao','Repositório de Trecho de código'], class: 'rotaciona', id: 3 },
     { nome: 'Conectar',subNomes:['Eventos','MegaGrants','MeetUps','Parceiros de Serviço','Estudantes e Escolas','Treinamento Profissional','Parceiros Academicos e de Treinamento'], class: 'rotaciona', id: 4 },
-    { nome: 'Mais',subNomes:['MarketPlace'], class: 'rotaciona', id: 5 }
+   
 ];
 
 function adicionaLinkLista() {
