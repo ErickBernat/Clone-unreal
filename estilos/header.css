@@ -1,0 +1,302 @@
+header{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+    background-color:#101015;
+    z-index: 1;
+    
+    
+
+    nav{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        width: 100%;
+        padding: 15px;
+        color:white;
+        z-index: 1;
+    }
+    .imageNav{
+        max-width: 100%;;
+        width:1.5vw;
+        height: auto;
+    }
+
+    .divUnrealImage{
+        display: block;
+
+        .imageUnreal{
+            max-width: 100%;
+            width:13vw;
+            height: auto;
+        }
+        
+    }
+
+    .divUnreallogo{
+        display: none;
+
+        .imageUnrealLogo{
+            max-width: 100%;
+            width:3vw;
+            height: auto;
+        }
+    }
+    
+
+  
+
+
+    ul{
+        display: flex;
+        align-items: row;
+        gap: 1vw;
+
+        a{
+            height: 20px;
+            text-decoration: none;
+            font-family: textoRegular;
+            font-size: clamp(0.8rem,0.8vw,3rem);
+            color: var(--cor-tags-a);
+
+            
+        }
+        a:hover{
+            color: var(--cor-tags-a-hover);
+        }
+
+        
+        
+        .conteudo_rotaciona{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.3vw;
+            cursor: pointer;
+
+            .seta{
+                max-width: 100%;
+                width: 0.7vh;
+            }
+
+            
+        }                
+        .conteudo_rotaciona:hover .seta {
+            transform: rotate(180deg);
+            transition:0.5s ;
+        }
+        
+        
+        
+    }
+
+   
+    
+    .divSobrepoe{
+        transition: 0.2s;
+        display: flex;
+        flex-direction: column;
+        text-align: start;
+        align-items: start;
+        gap: 2vh;
+        height: auto;
+        background-color: transparent;
+        color: rgb(0, 0, 0);
+        position: absolute;
+        z-index: 3;
+        padding: 1vh;
+        border-radius: 10px;
+        background: var(--cor-fundo-div);
+        display: none;
+        margin-top: 1.2%;
+        opacity: 0%;
+        box-shadow: 0px 10px 50px;
+
+        a{
+            font-family: textoRegular;
+            border-radius: 10px;
+            padding: 2vh;
+            display: flex;
+            justify-content: start;
+            align-items: center;
+            color: white;
+        }
+
+        a:hover{
+            color: white;
+           background-color:var(--cor-tags-a-hover-div);
+        }
+       
+    
+    }
+
+    .nav_input{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        
+        gap: 0.7vw;
+        padding: 1vw;
+        max-width: 100%;
+        width: 19vw;
+        border-radius: 20px;
+        border: 0.1px solid rgba(255, 255, 255, .15);
+       
+        height: 4.5vh;
+        background-color: rgba(255, 255, 255, .05);
+
+        .input_nav{
+
+            border: none;
+            text-decoration: none;
+            
+            max-width: 100%;
+            width: 18vw;
+            height: 3vh;
+            border-radius: 20px;
+            border: 0px solid #ccc;
+            border-style: none;
+            background-color: transparent;
+            
+            font-size: 13px;
+            font-family: textoRegular;
+          
+        }
+        .input_nav:focus {
+            border: none;
+            text-decoration: none;
+            border-style: none;
+          }
+
+    }
+
+   
+
+    svg{
+        max-width: 100%;;
+        width:1.5vw;
+        height: auto;
+        fill: currentcolor;
+        
+    }
+
+    .button-download{
+        background-color: var(--cor-botao-azul);
+        color:black;
+        border:none;
+        max-width: 100%;
+        font-weight: 500;
+        border-radius: 0.300rem;
+        width: 5vw;
+        height: 3.5vh;
+        font-size: 0.8vw;
+        cursor:pointer;
+        font-family: textoBold;
+    }
+    .button-download:hover{
+        background-color: var(--cor-botao-azul-hover);
+        transition: 0.1s;
+    }
+    .button-entrar{
+       background-color:var(--cor-botao-cinza);
+       color:white;
+       border:none;
+       cursor: pointer;
+        max-width: 100%;
+        font-weight: 500;
+        border-radius: 0.300rem;
+        width: 4vw;
+        height: 3.5vh;
+        font-size: 0.8vw;
+        font-family: textoBold;
+    }
+    .button-entrar:hover{
+        background-color: var(--cor-botao-cinza-hover);
+        transition: 0.1s;
+    }
+
+
+
+                    @media (min-width: 820px) and (max-width: 1200px) {
+
+                        header{
+                            max-width: 100%;
+
+                        }
+                        .button-download{
+                            width: 7vw;
+                            height: 3.5vh;
+                            font-size: 1.2vw;
+                           
+                        }
+                        .button-entrar{
+                            width: 7vw;
+                            height: 3.5vh;
+                            font-size: 1.2vw;
+                        }
+
+
+                        .nav_input{
+                            display: flex;
+                            flex-direction: row;
+                            justify-content: center;
+                            align-items: center;
+                            
+                            gap: 0.7vw;
+                            padding: 1vw;
+                            max-width: 100%;
+                            width: 25vw;
+                            border-radius: 20px;
+                            border: 0.1px solid rgba(255, 255, 255, .15);
+                           
+                            height: 4.5vh;
+                            background-color: rgba(255, 255, 255, .05);
+                    
+                            .input_nav{
+                    
+                                border: none;
+                                text-decoration: none;
+                                
+                                max-width: 100%;
+                                width: 18vw;
+                                height: 3vh;
+                                border-radius: 20px;
+                                border: 0px solid #ccc;
+                                border-style: none;
+                                background-color: transparent;
+                                
+                                font-size: 15px;
+                                font-family: textoRegular;
+                              
+                            }
+                            
+                    
+                        }
+
+                        svg{
+                            max-width: 100%;;
+                            width:2vw;
+                            height: auto;
+                            
+                        }
+
+
+
+                    .divUnrealImage{
+                        display: none;
+                        
+                    }
+
+                    .divUnreallogo{
+                        display: block;
+                    }
+
+
+                    
+                }
+
+}
