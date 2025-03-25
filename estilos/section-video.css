@@ -60,15 +60,15 @@ main{
             font-weight: 500;
             font-family: textoBold;
             cursor: pointer;
-            height: 7vh;
-            font-size: clamp(0.8rem, 1vw, 1.2rem);
+            height: 5vh;
+            font-size: clamp(0.8rem, 2vw, 1.2rem);
             max-width: 100%;
         }
         .buttonA {
             background-color: var(--cor-botao-azul);
             color: black;
             border: none;
-            width: 10vw;
+            width: 13vw;
         }
             .buttonA:hover{
                 background-color: var(--cor-botao-azul-hover);
@@ -79,7 +79,7 @@ main{
                 background-color: transparent;
                 border: 1px solid rgb(196, 196, 196);
                 color: white;
-                width: 17vw;
+                width: 20vw;
             }
                 .buttonB:hover{
                     background-color: var(--cor-botao-cinza-hover);
@@ -108,7 +108,7 @@ main{
 
 
     }
-    @media (max-width: 1200px) {
+    @media (max-width: 1400px) {
         .logo-container-unreal {
             display: none;
         }
@@ -142,8 +142,13 @@ main{
             flex-direction: row;
             justify-content: start;
     
-            .buttonA, .buttonB {
+            .buttonA{
                 width: 30%;
+                border-radius: 3%;
+            }
+
+            .buttonB {
+                width: 40%;
                 border-radius: 3%;
             }
         }
@@ -155,7 +160,7 @@ main{
 
     
 
-    @media (max-width: 710px) {
+    @media (max-width: 800px) {
         .page-container-principal {
             width: 100%;
             flex-direction: column;
@@ -183,11 +188,11 @@ main{
     
             .buttonA{
                 width: 50%;
-                height: 6vh;
+                height: 4vh;
             }
             .buttonB{
                 width: 80%;
-                height: 6vh;
+                height: 4vh;
             }
             
         }

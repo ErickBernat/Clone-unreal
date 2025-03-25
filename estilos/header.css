@@ -10,6 +10,7 @@ header{
     
 
     nav{
+        position: relative;
         display: flex;
         flex-direction: row;
         justify-content: space-around;
@@ -21,18 +22,175 @@ header{
         z-index: 1;
     }
     .imageNav{
-        width: clamp(20px, 1.5vw, 50px);
+        width: clamp(30px, 1.5vw, 50px);
         height: auto;
+    }
+
+
+    .Menu-Hamburguer-Botao{
+        display: none;
+        position: relative;
+        background-color: transparent;
+        border: none;
+        width: clamp(100px, 2vw, 50px);
+
+        svg{
+            fill: antiquewhite;
+        }
+
+    }
+    .Menu-Hamburguer{
+        display: none;
+        position: absolute;
+        flex-direction: column;
+        align-items: center;  
+     justify-content: center ; 
+        top: 100%;
+        left: 0;
+        width: 100%;
+        height: 0vh;
+        background-color:#101015;
+        
+        
+    }
+
+    .svg-pesquisa{
+
+        width: clamp(15px, 5vw, 100px);
+        height: auto;
+
+    }
+
+    .Menu-Hamburguer-Nav-SvgeBotao{
+        display: flex;
+       
+        align-items: center;
+        justify-content: center;
+        gap: 3vw;
+    }
+
+    .Menu-Hamburguer-Nav{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+        height: auto;
+        padding: 0vw 10vw;
+   
+    }
+
+    .Menu-Hamburguer-Nav-botao{
+        width: clamp(15px, 10vw, 100px);
+    }
+
+    .Menu-Hamburguer-Informacoes{
+        display: flex;
+        flex-direction: column;
+        width: 70%;
+        margin-top: 10%;
+
+        h1{
+            padding: 0vw 10vw;
+            font-weight: bold;
+            font-size: clamp(15px, 10vw, 100px);
+            font-family: textoRegular;
+        }
+        
+       
+        
+    }
+
+
+
+    .Menu-Hamburguer-Footer {
+        position: fixed;  
+        bottom: 0; 
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        padding: 10px;
+        height: auto;
+    }
+
+    .button-entrar-hamburguer{
+        border: none;
+        font-weight: bold;
+        border-radius: 0.3rem;
+        width: clamp(40px, 90vw,700px);
+        height: clamp(5px, 7vh, 70px);
+        font-size: clamp(12px, 4vw, 30px);
+        font-family: textoRegular;
+        cursor: pointer;
+    }
+
+    
+
+    
+
+
+    .inputs{
+        width: 100vw;
+        display: flex;
+        flex-direction: column;
+        gap: 0.5vh;
+
+        padding: 0vw 10vw;
+
+        a{
+            text-decoration: none;
+            font-family: textoRegular;
+            border-radius: 10px;
+            width: 90%;
+            padding: 2vh 1vh;
+            display: flex;
+            justify-content: start;
+            align-items: center;
+            color: white;
+        }
+
+        a:hover{
+            color: white;
+           background-color:var(--cor-tags-a-hover-div);
+        }
+    }
+    
+
+   
+
+    .Menu-Hamburguer-Botao-Svg{
+        width: clamp(30px, 2vw, 50px);
+     
+        fill: currentcolor;
+    }
+
+   
+
+    
+
+    .images-nav{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 2vw;
+    
     }
 
     .divUnrealImage{
         display: block;
+       
 
         .imageUnreal{
-            width: clamp(100px, 13vw, 250px);
+            width: clamp(30px, 50vw, 250px);
             height: auto;
         }
         
+    }
+    .svg-Internet{
+        width: clamp(15px, 1.5vw, 40px);
+        height: auto;
+        fill: currentcolor;
     }
 
     .divUnreallogo{
@@ -46,9 +204,10 @@ header{
     
 
   
-
+    
 
     ul{
+        display: block;
         display: flex;
         gap: 1vw;
 
@@ -86,6 +245,10 @@ header{
         
         
     }
+
+
+    
+    .listaCortada{display: none;}
 
    
     
@@ -125,6 +288,7 @@ header{
        
     
     }
+    
 
     .nav_input{
         display: flex;
@@ -175,7 +339,7 @@ header{
     }
 
     .button-download,
-    .button-entrar {
+    .button-entrar,.Menu-Hamburguer-Nav-botao{
         border: none;
         font-weight: 500;
         border-radius: 0.3rem;
@@ -184,58 +348,121 @@ header{
         font-size: clamp(12px, 0.8vw, 18px);
         font-family: textoRegular;
         cursor: pointer;
+       
     }
-    .button-download {
+    .button-download,.button-entrar-hamburguer{
         background-color: var(--cor-botao-azul);
         color: black;
     }
 
-    .button-download:hover{
+    .button-download,.button-entrar-hamburguer:hover{
         background-color: var(--cor-botao-azul-hover);
         transition: 0.1s;
     }
-    .button-entrar {
+    .button-entrar,.Menu-Hamburguer-Nav-botao {
         background-color: var(--cor-botao-cinza);
         color: white;
     }
-    .button-entrar:hover{
+    .button-entrar,.Menu-Hamburguer-Nav-botao:hover{
         background-color: var(--cor-botao-cinza-hover);
         transition: 0.1s;
     }
 
 
 
-    @media (max-width: 819px) {
-        flex-direction: column;
-        align-items: center;
-        padding: 5px;
+    @media (max-width: 800px) {
+
+        .Menu-Hamburguer-Botao{
+            display: block;
+        }
+
+        .listaLinks{
+            display: none;
+        }
+
+        .listaCortada{
+            display: block;
+        }
+
+        .Menu-Hamburguer{
+            display: block;
+            justify-content: center;
+        }
+
+        .images-nav{
+
+            .divUnreallogo {
+                display: none;
+             
+             }
+            .divUnrealImage {
+                display: block;
+           
+            }
+           
+        }
+
+       
+
+    
+        nav{
+            gap: 20vw;
+        }
+        
+
+
+         .svg-Internet{
+        display: none;
+            }
+
+        .imageNav{
+        
+            height: auto;
+        }
+        
 
         .nav_input {
             width: 90%;
+            display: none;
+        }
+
+       
+
+        .svg{
+            display: none;
         }
 
         ul {
             flex-direction: column;
             align-items: center;
             gap: 2vh;
+            display: none;
         }
 
         .button-download,
         .button-entrar {
             width: 80%;
             font-size: 1rem;
-        }
-
-        .divUnrealImage {
             display: none;
         }
 
-        .divUnreallogo {
+        
+    }
+    @media (max-width: 1440px) {
+        
+
+        .Menu-Hamburguer{
+            display: none;
+        }
+
+        .listaLinks{
+            display: none;
+        }
+
+        .listaCortada{
             display: block;
         }
-    }
-    @media (max-width: 1200px) {
-        max-width: 100%;
+        
 
         .button-download,
         .button-entrar {
