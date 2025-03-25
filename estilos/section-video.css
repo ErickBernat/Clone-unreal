@@ -1,11 +1,9 @@
 main{
-    max-width: 100%;
     width: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
-    max-height: 100%;
-    height: 92vh;
+    height: auto;
 
 }
 
@@ -20,16 +18,20 @@ main{
         max-height: 100%;
         width: 92vw;
         height: 85vh;
+        max-width: 100%;
     
     }
     .container-info{
         display: flex;
         flex-direction: column;
-        max-width: 100%;
-        width: 100vw;
-        height: 50vh;
+        width: 100%;
+        max-width: 50vw;
+        height: auto;
 
         gap: 2vw;
+
+        
+        
 
         h1{
             font-family: textoBold;
@@ -45,43 +47,40 @@ main{
         }
         
     }
+    
 
     .container-info-botoes{
         display: flex;
         flex-direction: row;
         gap: 1vw;
 
-            .buttonA{
-            background-color: var(--cor-botao-azul);
-            color:black;
-            border:none;
-            max-width: 100%;
-            font-weight: 500;
+        .buttonA,
+        .buttonB {
             border-radius: 0.6vw;
-            cursor: pointer;
-            width: 9vw;
-            height: 5vh;
-           font-size: 0.8vw;
+            font-weight: 500;
             font-family: textoBold;
-            }
+            cursor: pointer;
+            height: 7vh;
+            font-size: clamp(0.8rem, 1vw, 1.2rem);
+            max-width: 100%;
+        }
+        .buttonA {
+            background-color: var(--cor-botao-azul);
+            color: black;
+            border: none;
+            width: 10vw;
+        }
             .buttonA:hover{
                 background-color: var(--cor-botao-azul-hover);
                 transition: 0.1s;
             }
 
-            .buttonB{
-                background-color:transparent  ;
-                border:1px solid rgb(196, 196, 196);
-                color:white;
-                cursor: pointer;
-                max-width: 100%;
-                font-weight: 500;
-                border-radius: 0.6vw;
-                width: 14vw;
-                height: 5vh;
-                font-size: 0.8vw;
-                font-family: textoBold;
-                }
+            .buttonB {
+                background-color: transparent;
+                border: 1px solid rgb(196, 196, 196);
+                color: white;
+                width: 17vw;
+            }
                 .buttonB:hover{
                     background-color: var(--cor-botao-cinza-hover);
                     transition: 0.1s;
@@ -90,11 +89,16 @@ main{
 
     }
 
+    .logo-container-unreal {
+        max-width: 100%;
+        width: 20vw;
+    }
+
     .container-videos{
         display: flex;
         flex-direction: column;
         max-width: 100%;
-        width: 52vw;
+        width: 50vw;
 
 
         video{
@@ -104,180 +108,143 @@ main{
 
 
     }
-
-    .logo-container-unreal{
-        display: block;
-    }
-
-    @media (min-width: 820px) and (max-width: 1200px) {
-
-        .logo-container-unreal{
+    @media (max-width: 1200px) {
+        .logo-container-unreal {
             display: none;
         }
-
-        
-
-        main{
+    
+        .page-container-principal {
+            flex-direction: column;
             align-items: center;
-            justify-content: center;
-            
-        }
-
-        
-        .page-container-principal{
-            max-width: 100%;
             width: 90vw;
-            margin-top: 25%;    
-          
-           
-            flex-direction: column;
-            align-items: start;
+            height: auto;
+            gap: 10vh;
+            margin-top: 10%;
         }
-
-        .container-info{
-            display: flex;
-            flex-direction: column;
-            max-width: 100%;
-            width: 70vw;
-            height: 50vh;
-         
     
-            gap: 2vw;
+        .container-info {
+            max-width: 80vw;
+            text-align: start;
+            gap: 4vh;
 
             
-
-
-            .buttonA{
-                width: 12vw;
-                height: 6vh;
-                font-size: 1.2vw;
-            }
-
-            .buttonB{
-                width: 24vw;
-                height: 6vh;
-                font-size: 1.2vw;
-            }
-    
             h1{
-                font-family: textoBold;
-                font-weight: bold;
-                font-size: clamp(2rem, 3vw, 6rem);
-                color: white;
+                font-size: clamp(1rem, 6vw, 4rem);
             }
-            p{
-                font-size: clamp(1rem,1.3vw,5rem);
-                width: 57vw;
-                line-height: 3vh;
-                color:white;
-                font-family: textoRegular;
+            p {
+                font-size: clamp(1rem, 1.3vw, 6rem);
+                width: 75%;
             }
             
         }
-        
-
-        .container-videos{
-            max-width: 100%;
-            width: 300vw;
-
-            video{
-                max-width: 100%;
-                border-radius: 20px;
-                width: 100vw;
     
+        .container-info-botoes {
+            flex-direction: row;
+            justify-content: start;
+    
+            .buttonA, .buttonB {
+                width: 30%;
+                border-radius: 3%;
             }
         }
-        
+    
+        .container-videos {
+            width: 100%;
+        }
     }
 
-    @media (min-width: 320px) and (max-width: 710px) {
+    
 
-        
-
-        .logo-container-unreal{
-            display: none;
-        }
-
-        
-
-        main{
+    @media (max-width: 710px) {
+        .page-container-principal {
             width: 100%;
+            flex-direction: column;
             align-items: center;
-            justify-content: center;
-            
+            text-align: center;
         }
-
-        
-        .page-container-principal{
-            max-width: 100%;
-            width: 100%;
-            margin-top: 25%;    
-          
-           
-            flex-direction: column;
-            align-items: start;
-        }
-
-        .container-info{
-            display: flex;
-            flex-direction: column;
-            max-width: 100%;
-            width: 70%;
-            
-            height: 50vh;
-         
     
-            gap: 2vw;
-
-            .container-info-botoes{
-                display: flex;
-                flex-direction: column;
-                gap: 1vw;
-            }
-
-
-            .buttonA{
-                width: 12vw;
-                height: 6vh;
-                font-size: 1.2vw;
-            }
-
-            .buttonB{
-                width: 24vw;
-                height: 6vh;
-                font-size: 1.2vw;
-            }
-    
-            h1{
-                font-family: textoBold;
-                font-weight: bold;
-                font-size: clamp(2rem, 3vw, 6rem);
-                color: white;
-            }
-            p{
-                font-size: clamp(1rem,1.3vw,5rem);
-                width: 57vw;
-                line-height: 3vh;
-                color:white;
-                font-family: textoRegular;
-            }
-            
-        }
-        
-
-        .container-videos{
-            max-width: 100%;
+        .container-info {
             width: 90%;
+            gap: 3vh;
 
-            video{
-                max-width: 100%;
-                border-radius: 20px;
-                width: 90%;
+            h1{
+                font-size: clamp(0.9rem, 6vw, 5rem);
+            }
     
+            p {
+                font-size: clamp(0.9rem, 1.5vw, 1.3rem);
             }
         }
-        
+    
+        .container-info-botoes {
+            align-items: start;
+            flex-direction: column;
+            gap: 1rem;
+    
+            .buttonA{
+                width: 50%;
+                height: 6vh;
+            }
+            .buttonB{
+                width: 80%;
+                height: 6vh;
+            }
+            
+        }
+    
+        .container-videos {
+            width: 90%;
+            video {
+                width: 100%;
+            }
+        }
     }
+
+    @media (max-width: 355px) {
+        .page-container-principal {
+            width: 100%;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+    
+        .container-info {
+            width: 90%;
+            gap: 3vh;
+
+            h1{
+                font-size: clamp(0.9rem, 6vw, 5rem);
+            }
+    
+            p {
+                font-size: clamp(0.9rem, 1.5vw, 1.3rem);
+            }
+        }
+    
+        .container-info-botoes {
+            align-items: start;
+            flex-direction: column;
+            gap: 1rem;
+    
+            .buttonA{
+                width: 50%;
+                height: 6vh;
+            }
+            .buttonB{
+                width: 80%;
+                height: 6vh;
+            }
+            
+        }
+    
+        .container-videos {
+            width: 90%;
+            video {
+                width: 100%;
+            }
+        }
+    }
+    
 
 
 

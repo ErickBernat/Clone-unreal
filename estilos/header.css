@@ -3,8 +3,8 @@ header{
     flex-direction: row;
     align-items: center;
     justify-content: space-around;
-    width: 100%;
     background-color:#101015;
+    width: 100%;
     z-index: 1;
     
     
@@ -14,14 +14,14 @@ header{
         flex-direction: row;
         justify-content: space-around;
         align-items: center;
+        max-width: 100vw;
         width: 100%;
         padding: 15px;
         color:white;
         z-index: 1;
     }
     .imageNav{
-        max-width: 100%;;
-        width:1.5vw;
+        width: clamp(20px, 1.5vw, 50px);
         height: auto;
     }
 
@@ -29,8 +29,7 @@ header{
         display: block;
 
         .imageUnreal{
-            max-width: 100%;
-            width:13vw;
+            width: clamp(100px, 13vw, 250px);
             height: auto;
         }
         
@@ -40,8 +39,7 @@ header{
         display: none;
 
         .imageUnrealLogo{
-            max-width: 100%;
-            width:3vw;
+            width: clamp(30px, 3vw, 100px);
             height: auto;
         }
     }
@@ -52,19 +50,17 @@ header{
 
     ul{
         display: flex;
-        align-items: row;
         gap: 1vw;
 
-        a{
-            height: 20px;
+        li,a{
             text-decoration: none;
             font-family: textoRegular;
             font-size: clamp(0.8rem,0.8vw,3rem);
             color: var(--cor-tags-a);
-
+            list-style: none;
             
         }
-        a:hover{
+        li:hover{
             color: var(--cor-tags-a-hover);
         }
 
@@ -73,13 +69,11 @@ header{
         .conteudo_rotaciona{
             display: flex;
             align-items: center;
-            justify-content: center;
             gap: 0.3vw;
             cursor: pointer;
 
             .seta{
-                max-width: 100%;
-                width: 0.7vh;
+                width: clamp(5px, 0.8vh, 15px);
             }
 
             
@@ -99,7 +93,6 @@ header{
         transition: 0.2s;
         display: flex;
         flex-direction: column;
-        text-align: start;
         align-items: start;
         gap: 2vh;
         height: auto;
@@ -112,7 +105,7 @@ header{
         background: var(--cor-fundo-div);
         display: none;
         margin-top: 1.2%;
-        opacity: 0%;
+        opacity: 0;
         box-shadow: 0px 10px 50px;
 
         a{
@@ -141,25 +134,24 @@ header{
         
         gap: 0.7vw;
         padding: 1vw;
-        max-width: 100%;
-        width: 19vw;
+        width: clamp(150px, 19vw, 300px);
         border-radius: 20px;
         border: 0.1px solid rgba(255, 255, 255, .15);
        
-        height: 4.5vh;
+        height: 35px;
         background-color: rgba(255, 255, 255, .05);
 
         .input_nav{
 
             border: none;
-            text-decoration: none;
+           
             
-            max-width: 100%;
-            width: 18vw;
-            height: 3vh;
+           
+            width: 100%;
+            height: 4vh;
             border-radius: 20px;
-            border: 0px solid #ccc;
-            border-style: none;
+            color: white;
+           
             background-color: transparent;
             
             font-size: 13px;
@@ -168,8 +160,7 @@ header{
         }
         .input_nav:focus {
             border: none;
-            text-decoration: none;
-            border-style: none;
+            outline: none;
           }
 
     }
@@ -177,42 +168,35 @@ header{
    
 
     svg{
-        max-width: 100%;;
-        width:1.5vw;
+        width: clamp(15px, 1.5vw, 40px);
         height: auto;
         fill: currentcolor;
         
     }
 
-    .button-download{
-        background-color: var(--cor-botao-azul);
-        color:black;
-        border:none;
-        max-width: 100%;
+    .button-download,
+    .button-entrar {
+        border: none;
         font-weight: 500;
-        border-radius: 0.300rem;
-        width: 5vw;
-        height: 3.5vh;
-        font-size: 0.8vw;
-        cursor:pointer;
-        font-family: textoBold;
+        border-radius: 0.3rem;
+        width: clamp(50px, 5vw, 120px);
+        height: clamp(25px, 3.5vh, 50px);
+        font-size: clamp(12px, 0.8vw, 18px);
+        font-family: textoRegular;
+        cursor: pointer;
     }
+    .button-download {
+        background-color: var(--cor-botao-azul);
+        color: black;
+    }
+
     .button-download:hover{
         background-color: var(--cor-botao-azul-hover);
         transition: 0.1s;
     }
-    .button-entrar{
-       background-color:var(--cor-botao-cinza);
-       color:white;
-       border:none;
-       cursor: pointer;
-        max-width: 100%;
-        font-weight: 500;
-        border-radius: 0.300rem;
-        width: 4vw;
-        height: 3.5vh;
-        font-size: 0.8vw;
-        font-family: textoBold;
+    .button-entrar {
+        background-color: var(--cor-botao-cinza);
+        color: white;
     }
     .button-entrar:hover{
         background-color: var(--cor-botao-cinza-hover);
@@ -221,82 +205,59 @@ header{
 
 
 
-                    @media (min-width: 820px) and (max-width: 1200px) {
+    @media (max-width: 819px) {
+        flex-direction: column;
+        align-items: center;
+        padding: 5px;
 
-                        header{
-                            max-width: 100%;
+        .nav_input {
+            width: 90%;
+        }
 
-                        }
-                        .button-download{
-                            width: 7vw;
-                            height: 3.5vh;
-                            font-size: 1.2vw;
-                           
-                        }
-                        .button-entrar{
-                            width: 7vw;
-                            height: 3.5vh;
-                            font-size: 1.2vw;
-                        }
+        ul {
+            flex-direction: column;
+            align-items: center;
+            gap: 2vh;
+        }
 
+        .button-download,
+        .button-entrar {
+            width: 80%;
+            font-size: 1rem;
+        }
 
-                        .nav_input{
-                            display: flex;
-                            flex-direction: row;
-                            justify-content: center;
-                            align-items: center;
-                            
-                            gap: 0.7vw;
-                            padding: 1vw;
-                            max-width: 100%;
-                            width: 25vw;
-                            border-radius: 20px;
-                            border: 0.1px solid rgba(255, 255, 255, .15);
-                           
-                            height: 4.5vh;
-                            background-color: rgba(255, 255, 255, .05);
-                    
-                            .input_nav{
-                    
-                                border: none;
-                                text-decoration: none;
-                                
-                                max-width: 100%;
-                                width: 18vw;
-                                height: 3vh;
-                                border-radius: 20px;
-                                border: 0px solid #ccc;
-                                border-style: none;
-                                background-color: transparent;
-                                
-                                font-size: 15px;
-                                font-family: textoRegular;
-                              
-                            }
-                            
-                    
-                        }
+        .divUnrealImage {
+            display: none;
+        }
 
-                        svg{
-                            max-width: 100%;;
-                            width:2vw;
-                            height: auto;
-                            
-                        }
+        .divUnreallogo {
+            display: block;
+        }
+    }
+    @media (max-width: 1200px) {
+        max-width: 100%;
 
+        .button-download,
+        .button-entrar {
+            width: 7vw;
+            height: 3.5vh;
+            font-size: 1.2vw;
+        }
 
+        .nav_input {
+            width: 25vw;
+        }
 
-                    .divUnrealImage{
-                        display: none;
-                        
-                    }
+        svg {
+            width: 2vw;
+        }
 
-                    .divUnreallogo{
-                        display: block;
-                    }
+        .divUnrealImage {
+            display: none;
+        }
 
-
-                    
-                }
-
+        .divUnreallogo {
+            display: block;
+        }
+    }
 }

@@ -18,10 +18,15 @@ let links = [
 
 function adicionaLinkLista() {
     let i = 0;
+
+    if(window.innerWidth <= 1200){
+       links = links[0]
+    };
     links.forEach(item => {
         
         if (item.class == 'rotaciona') {
             let linksHtml = ''
+            
             if(item.subNomes){
                 
                 item.subNomes.forEach(subLink =>{
@@ -33,7 +38,7 @@ function adicionaLinkLista() {
             listaLinks.innerHTML += `
             <div class='conteudoMenu'>
                 <div class='conteudo_rotaciona'>
-                    <a href="" id="link-${item.id}" ">${item.nome}</a>
+                    <li href="" id="link-${item.id}" ">${item.nome}</li>
                     <img  class="seta ${item.class}" src="./assets/images/seta.png" alt="Seta" >
                 </div>
                 <div id="div-${item.id}" class="divSobrepoe" style="display: none;">
